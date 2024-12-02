@@ -1,0 +1,11 @@
+
+Listen for Webhooks:
+    bash
+        stripe listen --forward-to localhost:3000/webhook-endpoint
+        Replace localhost:3000/webhook-endpoint with your endpoint's URL.
+
+    Trigger Events: Use the CLI to trigger test events:
+
+    bash
+        stripe trigger payment_intent.succeeded
+        This sends a test payload to your endpoint.
